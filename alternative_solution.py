@@ -59,9 +59,9 @@ def main():
 
     united_states = Pics((648, 719),(632,1),pygame.image.load(os.path.join(sourceFileDir,'USA.PNG')).convert(), (165, 302), (45,45))
 
+    zoomed_in = Pics((1280,720),(0,0),pygame.image.load(os.path.join(sourceFileDir,'zoomed_graph.png')).convert(),(700,42),(554,363))
 
-
-    pictures = [alberta, brazil, canada, ontario, newzealand, united_states]  #creating a list of class instance to easily be able to iterate over each
+    pictures = [alberta, brazil, canada, ontario, newzealand, united_states, zoomed_in]  #creating a list of class instance to easily be able to iterate over each
 
 
 
