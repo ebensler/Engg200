@@ -7,20 +7,28 @@ Instructions for setup:
 - This program uses the module pygame, in order to install pygame, in the terminal type 'pip install pygame'
 once a virtual environment has been created.
 -  Once the program is running, a window should appear, at this point users can interact with the flag icons in order
-to bring up region specific data.
+to bring up region specific data.  Additionally, the graphs can be clicked on in order to give a more zoomed in version of them.
 '''
-import pygame, sys, os
+import pygame, sys, os  #importing the necessary modules for this
 
 pygame.init()
-size = 1280, 720
-screen = pygame.display.set_mode(size)
-font = pygame.font.SysFont(None, 110)
-pygame.display.set_caption('Alternative Solutions')
+size = 1280, 720 #screen size
+screen = pygame.display.set_mode(size) #creating screen that's 1280x720
+
+pygame.display.set_caption('COVID Response Infographic')
 
 
 
 class Pics:
+    
     def __init__ (self, size, cords, image, button_cords, button_size):
+        '''Parameters:  
+                Size: Dimensions of the picture
+                cords: Where the image is displayed
+                image: the image to be displayed
+                button_cords: where the button should be located
+                button_size: dimensions of the button
+        '''
         self.x_cord = cords[0] #coordinates of the image
         self.y_cord = cords[1]
         self.x_scale = size[0]  #size of the image
@@ -32,6 +40,11 @@ class Pics:
         
 
     def zoom(self):
+        '''Input:
+                Uses data from the class intance
+            Output: 
+                Outputs image corresponding to the button pressed and leaves it displayed until the user clicks again
+        '''
         screen.blit(self.image, (self.x_cord,self.y_cord)) #drawing the new image onscreen over the top of the background
         pygame.display.flip()   #refreshing the screen so the image appears on screen
         while True:
@@ -39,7 +52,7 @@ class Pics:
                 if ev.type == pygame.QUIT:
                     sys.exit(), (45,45)
                 if ev.type == pygame.MOUSEBUTTONDOWN:
-                    return(pygame.mouse.get_pos())
+                    return()
 
 
 def main():
