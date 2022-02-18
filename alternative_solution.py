@@ -61,7 +61,9 @@ def main():
 
     zoomed_in = Pics((1280,720),(0,0),pygame.image.load(os.path.join(sourceFileDir,'zoomed_graph.png')).convert(),(700,42),(554,363))
 
-    pictures = [alberta, brazil, canada, ontario, newzealand, united_states, zoomed_in]  #creating a list of class instance to easily be able to iterate over each
+    deaths_per100k = Pics((1280,720),(0,0), pygame.image.load(os.path.join(sourceFileDir,'deathper100k.png')).convert(),(700,450),(1254,700))
+
+    pictures = [alberta, brazil, canada, ontario, newzealand, united_states, zoomed_in, deaths_per100k]  #creating a list of class instances to easily be able to iterate over each
 
 
 
