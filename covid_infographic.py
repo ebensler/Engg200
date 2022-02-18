@@ -8,8 +8,9 @@ Instructions for setup:
 once a virtual environment has been created.
 -  Once the program is running, a window should appear, at this point users can interact with the flag icons in order
 to bring up region specific data.  Additionally, the graphs can be clicked on in order to give a more zoomed in version of them.
+-make sure that all files and images in the github repository are in the same folder when downloaded
 '''
-import pygame, sys, os  #importing the necessary modules for this
+import pygame, sys, os  #importing the necessary modules for this code
 
 pygame.init()
 size = 1280, 720 #screen size
